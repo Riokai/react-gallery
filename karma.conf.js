@@ -1,7 +1,7 @@
-var webpackCfg = require('./webpack.config');
+var webpackCfg = require('./webpack.config')
 
 // Set node environment to testing
-process.env.NODE_ENV = 'test';
+process.env.NODE_ENV = 'test'
 
 module.exports = function(config) {
   config.set({
@@ -32,5 +32,5 @@ module.exports = function(config) {
         { type: 'text' }
       ]
     }
-  });
-};
+  })
+}
