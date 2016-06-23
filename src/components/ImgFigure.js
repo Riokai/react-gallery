@@ -4,7 +4,7 @@ import React from 'react'
 
 require('styles/ImgFigure.scss')
 
-class ImgFigureComponent extends React.Component {
+class ImgFigure extends React.Component {
   render() {
     return (
       <figure className="img-figure">
@@ -19,10 +19,12 @@ class ImgFigureComponent extends React.Component {
   }
 }
 
-ImgFigureComponent.displayName = 'ImgFigureComponent'
+ImgFigure.displayName = 'ImgFigure'
 
 // Uncomment properties you need
-// ImgFigureComponent.propTypes = {}
-// ImgFigureComponent.defaultProps = {}
+ImgFigure.propTypes = {
+  data: React.PropTypes.object.isRequired
+}
+// ImgFigure.defaultProps = {}
 
-export default ImgFigureComponent
+export default ImgFigure
