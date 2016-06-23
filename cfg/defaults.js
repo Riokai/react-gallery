@@ -1,8 +1,10 @@
 'use strict'
 
 const path = require('path')
+const autoprefixer = require('autoprefixer')
 const srcPath = path.join(__dirname, '/../src')
-const dfltPort = 8000
+const dfltPort = 3000
+
 function getDefaultModules() {
   return {
     preLoaders: [{
@@ -38,6 +40,10 @@ function getDefaultModules() {
       {
         test: /\.(mp4|ogg|svg)$/,
         loader: 'file-loader'
+      },
+      {
+        test: /\.json/,
+        loader: 'json-loader'
       }
     ]
   }
@@ -48,6 +54,8 @@ module.exports = {
   port: dfltPort,
   getDefaultModules: getDefaultModules,
   postcss: function () {
-    return []
+    return [autoprefixer({
+      browsers: ['last 2 version']
+    })]
   }
 }

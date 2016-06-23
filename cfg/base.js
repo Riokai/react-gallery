@@ -1,4 +1,5 @@
 'use strict'
+
 let path = require('path')
 let defaultSettings = require('./defaults')
 
@@ -35,6 +36,7 @@ module.exports = {
       sources: `${defaultSettings.srcPath}/sources/`,
       stores: `${defaultSettings.srcPath}/stores/`,
       styles: `${defaultSettings.srcPath}/styles/`,
+      data: `${defaultSettings.srcPath}/data/`,
       config: `${defaultSettings.srcPath}/config/` + process.env.REACT_WEBPACK_ENV
     }
   },
